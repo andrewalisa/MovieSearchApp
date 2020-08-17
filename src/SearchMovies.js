@@ -1,19 +1,38 @@
-import React from 'react';
-
-const searchMovies = async (e) =>{
-    e.preventDefault();
-    console.log(process.env.REACT_APP_SECRET_CODE);
-
-    
-}
-
+import React, {useState} from 'react';
 
 export default function SearchMovies(){
+
+    const [query, setQuery] = useState('');
+    const [movies, setMovies] = useState([]);
+
+    const searchMovies = async (e) =>{
+        e.preventDefault();
+
+        const url = `${process.env.REACT_APP_SECRET_CODE}&language=en-US&query=${query}&include_adult=false`;
+
+        try{
+            const res = await fetch(url);
+            const data = await res.json();
+            setMovies(data.results);
+        }
+        catch(err){
+            console.error(err);
+        }
+
+        
+        
+    }
+
     return (
-        <form className="form" onSubmit={searchMovies}>
-            <label className="label" htmlFor="query"> Movie Name</label>
-            <input className="input" type="text" name="query" htmlFor="query" placeholder="i.e. Toy Story" />
-            <button className="button" type="submit">Search</button>
-        </form>
+        <>
+            <form className="form" onSubmit={searchMovies}>
+                <label className="label" htmlFor="query"> Movie Name</label>
+                <input className="input" type="text" name="query" htmlFor="query" placeholder="i.e. Toy Story" value={query} onChange={(e) => setQuery(e.target.value)} />
+                <button className="button" type="submit">Search</button>
+            </form>
+            <div className="card-list">
+                {movies.map(movie =>movie.title)}
+            </div>
+        </>
     )
 }

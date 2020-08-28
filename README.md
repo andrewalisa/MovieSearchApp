@@ -1,6 +1,19 @@
+# Movie Search App
+
+I wanted to enhance and practice my React skills. I followed [this](https://www.youtube.com/watch?v=UKmsNUk7RxM) tutorial to create the movie search app.
+
+## Getting Started
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Prerequisites
+
+Clone this repository. You will need to have Node.js and NPM installed on your machine.
+
+[Node](http://nodejs.org/) is really easy to install & it includes include [NPM](https://npmjs.org/)  
+
+You will need to sign up for an API from [themoviedb](https://www.themoviedb.org/).
+
+### Available Scripts
 
 In the project directory, you can run:
 
@@ -42,6 +55,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+To see the original article I found on FreeCodeCamp, that led me to build this project, please [click here](https://www.freecodecamp.org/news/learn-react-in-1-hour-by-building-a-movie-search-app/).
 
 ### Code Splitting
 

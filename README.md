@@ -11,7 +11,7 @@ Clone this repository. You will need to have Node.js and NPM installed on your m
 
 [Node](http://nodejs.org/) is really easy to install & it includes include [NPM](https://npmjs.org/)  
 
-You will need to sign up for an API from [themoviedb](https://www.themoviedb.org/).
+You will need to sign up for an API from [themoviedb](https://www.themoviedb.org/). Put your API key in the .env file. 
 
 ### Available Scripts
 
@@ -81,3 +81,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## What I learned
+I learned a lot about the fundamentals of React, and I learned about React hooks. 
